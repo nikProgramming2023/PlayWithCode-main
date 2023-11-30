@@ -1,78 +1,68 @@
-//const colors = ["Red", "Blue", "Green"];
+// JS Object
+// const pencil = {
+// length: "7.5 inches",
+// shape: "Hexagonal",
+// diameter: "1/4 inch",
+// write: function () {
+/*do writing*/
+// },
+// erase: function () {
+/*do erasing*/
+// },
+// sharpen: function () {
+/*do sharpening*/
+// },
+// };
+// function Cat(name, type) {
+// this.name = name;
+// this.type = type;
+// }
+// const ourCat = {};
+// ourCat.name = "Nala";
+// ourCat.type = "Domestic Calico";
 
-//Getting into arrays
+// Object made with a class
+// class Pet {
+// constructor(name, type) {
+// this.name = name;
+// this.type = type;
+// }
+// }
 
-//new Array();
-//const Months = new Array("January", "Febuary", "March", "April", "May");
+// const ourDog = new Pet("Luke", "AmStaff");
+// const computer = { memory: "16GB", HD: "8TB" };
 
-//const breakfast = ["Eggs", "Bacon", "Pancakes"];
+// const laptop = Object.create(computer);
 
-//const myArray = [43, 199, 123];
-//let sum = 0;
-//for (let i = 0; i < myArray.length - 1; ++i) {
-//sum += myArray[i];
-//}
-//console.log(`The sum is ${sum}`);
+/* Making a object and then using dot notation */
+// const myLocation = {
+// city: {
+// id: 2643743,
+// name: "london",
+// coords: {
+// lon: -0.1258,
+// lat: 51.5085,
+// },
+// country: "GB",
+// population: 9820000,
+// timezone: 3600,
+// },
+/* myLocation.city.country
+     myLocation[city][name] */
+// };
 
-//const ingrediants = [
-//"Eggs",
-//   //"Milk",
-//   "Cheese",
-//   "Garlic",
-//   "Onion",
-//   "Kale",
-//   "Salt",
-//   "Pepper",
-//];
-
-//CallBack Functions
-//function squareIt(num) {
-//return num * num;
-//};
-//console.log(squareIt);
-
-// const ingrediants = [
-// "Eggs",
-// "Milk",
-// "Cheese",
-// "Garlic",
-// "Onion",
-// "Kale",
-// "Salt",
-// "Pepper",
-// ];
-// let listItems = ingrediants
-// .map((singleIngrediants) => `<li>${singleIngrediants}</li>`)
-// .join(``);
-// document.getElementById(`ingrediants`).innerHTML = listItems;
-// How to filter arrays
-
-// const animalNames = [
-// "Aardvark",
-// "Alligator",
-// "Alpaca",
-// "Bear",
-// "Beaver",
-// "Cat",
-// "Dog",
-// "Elephant",
-// ];
-// const animalsStratingWithA = animalNames.filter((animal) =>
-// animal.startsWith("A")
-// );
-
-// document.getElementById("animal-names").innerHTML = animalNames;
-// document.getElementById("animal-names-start-with-a").innerHTML =
-// animalsStratingWithA;
-
-// animalNames.map((allAnimals) => `<li>${allAnimals}</li>`).join("");
-
-//Spreading Arrays
-
-// const firstArray = ["a", "b", "c"];
-// const secongArray = [...firstArray, "d"];
-
-// const fruits = ["Apple", "Bannana", "Cantelope"];
-// const fruitsCopy = [...fruits];
-// fruitsCopy.push("Dragon Fruit");
-// conlsole.log(fruits, fruitsCopy);
+/* Printing out the properties of an object */
+// for (const property in document) {
+// console.log(`${property}: ${document[property]}`);
+// }
+const firstObject = { prop1: "test", prop2: "test2" };
+const secondObject = { prop1: "test", prop2: "test2" };
+const thrirdObject = secondObject;
+const fourthObject = { ...secondObject };
+thrirdObject.prop1 = "Orange";
+/*
+When an object is created from a constructor function, the new object's prototype is the constructor function.
+When an object is created from another object, the object it's created from becomes the new object's prototype.
+Objects can have their own properties, but they also access the properties of their parents.
+If an object has it's own property, it uses the value of that property rather than the parents's property with the same name.
+*/
